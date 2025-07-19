@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Senior Junior Dev Art</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .content-container {
+        position: relative;
+        width: 50rem;
+        height: 49rem;
+        background-color: green;
+      }
+
+      .content-container--overlay {
+        background-image: url("./senior-dev-junior-dev-arrows.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: 0.3;
+      }
+
+      .junior-dev {
+        border: 1px solid black;
+        height: 11rem;
+        width: 8rem;
+        position: absolute;
+        bottom: 0;
+        right: 8rem;
+      }
+
+      .junior-dev--head {
+      }
+
+      .junior-dev--body {
+      }
+
+      .junior-dev--arm-left {
+      }
+
+      .junior-dev--arm-right {
+      }
+
+      .junior-dev--leg-left {
+      }
+
+      .junior-dev--leg-right {
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content" class="content-container content-container--overlay">
+      <div class="junior-dev">
+        <div class="junior-dev--head"></div>
+        <div class="junior-dev--body"></div>
+        <div class="junior-dev--arm-left"></div>
+        <div class="junior-dev--arm-right"></div>
+        <div class="junior-dev--leg-left"></div>
+        <div class="junior-dev--leg-right"></div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      document.addEventListener("keyup", (event) => {
+        if (event.code === "KeyT") {
+          const container = document.querySelector("#content");
+
+          if (container.classList.contains("content-container--overlay")) {
+            container.classList.remove("content-container--overlay");
+          } else {
+            container.classList.add("content-container--overlay");
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
