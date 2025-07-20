@@ -487,10 +487,10 @@
         position: relative;
         top: -31rem;
         right: -18rem;
+        z-index: 80;
       }
 
       .senior-dev--arm-group-left {
-        border: 2px solid black;
         position: relative;
         bottom: 33rem;
         left: 4rem;
@@ -541,6 +541,56 @@
         );
         background-color: var(--black);
         left: -0.5rem;
+      }
+
+      .senior-dev--arm-group-right {
+        border: 2px solid black;
+        position: relative;
+        bottom: 54rem;
+        left: 26rem;
+        height: 19rem;
+        width: 11rem;
+        z-index: 70;
+      }
+
+      .senior-dev--arm-right {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(
+          21% 1%,
+          83% 37%,
+          91% 57%,
+          87% 62%,
+          90% 66%,
+          87% 68%,
+          80% 79%,
+          14% 77%,
+          11% 75%,
+          14% 59%
+        );
+        background-color: var(--dark-grey);
+        top: -19.5rem;
+        left: 0.5rem;
+      }
+
+      .senior-dev--arm-right-outer {
+        position: relative;
+        width: 109%;
+        height: 109%;
+        clip-path: polygon(
+          21% 1%,
+          83% 37%,
+          91% 57%,
+          87% 62%,
+          90% 66%,
+          87% 68%,
+          80% 79%,
+          14% 77%,
+          11% 75%,
+          14% 59%
+        );
+        background-color: var(--black);
       }
     </style>
   </head>
@@ -603,8 +653,11 @@
           <div class="senior-dev--hand-left"></div>
         </div>
 
-        <div class="senior-dev--arm-right">
-          <div class="senior-dev--hand-left"></div>
+        <div class="senior-dev--arm-group-right">
+          <div class="senior-dev--arm-right-outer"></div>
+          <div class="senior-dev--arm-right"></div>
+
+          <div class="senior-dev--hand-right"></div>
         </div>
         <div class="senior-dev--waist-left"></div>
         <div class="senior-dev--waist-center"></div>
