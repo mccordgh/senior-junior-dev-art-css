@@ -77,6 +77,7 @@
         left: 1rem;
         z-index: 99;
       }
+
       /* left eye */
       .junior-dev--head::before {
         content: "";
@@ -292,6 +293,99 @@
         z-index: -1;
         transform: rotate(-30deg) skew(25deg, 0);
       }
+
+      .senior-dev {
+        color: var(--black);
+        border: 1px solid var(--black);
+        height: 46rem;
+        width: 38rem;
+        position: relative;
+        top: 3rem;
+        left: 1rem;
+      }
+
+      .senior-dev--head {
+        background-color: var(--white);
+        border: 8px solid var(--black);
+        border-radius: 100%;
+        position: absolute;
+        width: 13rem;
+        height: 12rem;
+        left: 17.6rem;
+        top: 9.4rem;
+        z-index: 90;
+      }
+
+      /* left eye */
+      .senior-dev--head::before {
+        content: "";
+        height: 1.2rem;
+        width: 1.2rem;
+        top: 7.8rem;
+        left: 4.9rem;
+        background-color: var(--black);
+        border-radius: 100%;
+        position: absolute;
+      }
+
+      /* right eye */
+      .senior-dev--head::after {
+        content: "";
+        height: 1.2rem;
+        width: 1.2rem;
+        top: 7.8rem;
+        left: 9.8rem;
+        background-color: var(--black);
+        border-radius: 100%;
+        position: absolute;
+      }
+
+      .senior-dev--mouth {
+        position: relative;
+        border: 3px solid var(--black);
+        border-radius: 3px 0 1rem 1rem;
+        /* background-color: pink; */
+        width: 2.4rem;
+        height: 1rem;
+        left: 6.9rem;
+        top: 9rem;
+        rotate: -9deg;
+        z-index: -1;
+      }
+
+      .senior-dev--mouth::before {
+        content: "";
+        display: inline-block;
+        position: relative;
+        border-top: 3px solid var(--black);
+        border-right: 3px solid var(--black);
+        border-radius: 100%;
+        background-color: var(--white);
+        width: 0.9rem;
+        height: 1.2rem;
+        left: 0.05rem;
+        top: -0.8rem;
+        /* rotate: -66deg; */
+        transform: rotate(-66deg) skew(20deg, 0);
+        z-index: 1;
+      }
+
+      .senior-dev--mouth::after {
+        content: "";
+        display: inline-block;
+        position: relative;
+        border-top: 3px solid var(--black);
+        border-right: 3px solid var(--black);
+        border-radius: 1px 17px 50% 50%;
+        background-color: var(--white);
+        width: 0.7rem;
+        height: 0.6rem;
+        left: 0rem;
+        top: -1.2rem;
+        /* rotate: -66deg; */
+        transform: rotate(156deg) skew(20deg, 0);
+        z-index: 1;
+      }
     </style>
   </head>
   <body>
@@ -321,6 +415,32 @@
           <div class="junior-dev--sword-blade-right"></div>
           <div class="junior-dev--sword-blade-point"></div>
         </div>
+      </div>
+
+      <div class="senior-dev">
+        <div class="senior-dev--sword-top"></div>
+        <div class="senior-dev--head">
+          <div class="senior-dev--mouth"></div>
+        </div>
+        <!-- <div class="senior-dev--hair">IGNORING FOR NOW WHILE THINKING OF IMPLEMENTATION</div> -->
+        <div class="senior-dev--back-left"></div>
+        <div class="senior-dev--back-right"></div>
+        <div class="senior-dev--collar-left"></div>
+        <div class="senior-dev--collar-right"></div>
+        <div class="senior-dev--shoulder-left"></div>
+        <div class="senior-dev--shoulder-right"></div>
+        <div class="senior-dev--arm-left">
+          <div class="senior-dev--hand-left"></div>
+        </div>
+        <div class="senior-dev--arm-right">
+          <div class="senior-dev--hand-left"></div>
+        </div>
+        <div class="senior-dev--waist-left"></div>
+        <div class="senior-dev--waist-center"></div>
+        <div class="senior-dev--waist-right"></div>
+        <div class="senior-dev--sword-bottom"></div>
+        <div class="senior-dev--leg-left"></div>
+        <div class="senior-dev--leg-right"></div>
       </div>
     </div>
 
