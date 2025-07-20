@@ -10,6 +10,7 @@
         --white: whitesmoke;
         --black: #242424;
         --brown: #845636; /* sword */
+        --blue: #51aff4; /* armor base */
 
         /* --lightest-color: #b3cbb9;
         --light-color: #8fb996;
@@ -385,6 +386,28 @@
         /* rotate: -66deg; */
         transform: rotate(156deg) skew(20deg, 0);
         z-index: 1;
+      }
+
+      .senior-dev--shoulder-left {
+        position: relative;
+        border: 5px solid var(--black);
+        width: 16rem;
+        height: 15rem;
+        left: 2rem;
+        top: 10rem;
+        /* clip-path: ellipse(125px 140px at 10% 20%); */
+        clip-path: polygon(
+          2% 56%,
+          17% 26%,
+          46% 4%,
+          64% 5%,
+          87% 26%,
+          98% 59%,
+          84% 88%,
+          49% 98%,
+          4% 95%
+        );
+        background-color: var(--blue);
       }
     </style>
   </head>
