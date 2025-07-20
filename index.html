@@ -30,6 +30,10 @@
         box-sizing: border-box;
       }
 
+      .hidden {
+        visibility: hidden;
+      }
+
       html,
       body {
         background-color: var(--white);
@@ -390,11 +394,10 @@
 
       .senior-dev--shoulder-left {
         position: relative;
-        border: 5px solid var(--black);
         width: 16rem;
         height: 15rem;
         left: 2rem;
-        top: 10rem;
+        top: -5.5rem;
         /* clip-path: ellipse(125px 140px at 10% 20%); */
         clip-path: polygon(
           2% 56%,
@@ -408,6 +411,76 @@
           4% 95%
         );
         background-color: var(--blue);
+      }
+
+      .senior-dev--shoulder-left-outer {
+        position: relative;
+        width: 17rem;
+        height: 16rem;
+        left: 1.6rem;
+        top: 10rem;
+        clip-path: polygon(
+          2% 56%,
+          17% 26%,
+          46% 4%,
+          64% 5%,
+          87% 26%,
+          98% 59%,
+          84% 88%,
+          49% 98%,
+          4% 95%
+        );
+        background-color: var(--black);
+      }
+
+      .senior-dev--shoulder-right {
+        position: relative;
+        width: 5.8rem;
+        height: 12.3rem;
+        left: 13.1rem;
+        top: -2rem;
+        /* clip-path: ellipse(125px 140px at 10% 20%); */
+        clip-path: polygon(
+          5% 32%,
+          0% -1%,
+          26% 7%,
+          23% 5%,
+          66% 24%,
+          93% 57%,
+          120% 98%,
+          50% 102%,
+          -34% 83%,
+          -20% 80%
+        );
+        background-color: var(--blue);
+      }
+
+      .senior-dev--shoulder-right-outer {
+        position: relative;
+        width: 6.8rem;
+        height: 13.3rem;
+        left: 12.6rem;
+        top: 10.6rem;
+        /* clip-path: ellipse(125px 140px at 10% 20%); */
+        clip-path: polygon(
+          5% 32%,
+          0% -1%,
+          26% 7%,
+          23% 5%,
+          66% 24%,
+          93% 57%,
+          120% 98%,
+          50% 102%,
+          -34% 83%,
+          -20% 80%
+        );
+        background-color: var(--black);
+      }
+
+      .senior-dev--shoulder-group-right {
+        position: relative;
+        top: -31rem;
+        right: -18rem;
       }
     </style>
   </head>
@@ -442,16 +515,27 @@
 
       <div class="senior-dev">
         <div class="senior-dev--sword-top"></div>
+
         <div class="senior-dev--head">
           <div class="senior-dev--mouth"></div>
         </div>
         <!-- <div class="senior-dev--hair">IGNORING FOR NOW WHILE THINKING OF IMPLEMENTATION</div> -->
         <div class="senior-dev--back-left"></div>
         <div class="senior-dev--back-right"></div>
+
         <div class="senior-dev--collar-left"></div>
         <div class="senior-dev--collar-right"></div>
-        <div class="senior-dev--shoulder-left"></div>
-        <div class="senior-dev--shoulder-right"></div>
+
+        <div class="senior-dev--shoulder-group-left">
+          <div class="senior-dev--shoulder-left-outer"></div>
+          <div class="senior-dev--shoulder-left"></div>
+        </div>
+
+        <div class="senior-dev--shoulder-group-right">
+          <div class="senior-dev--shoulder-right-outer"></div>
+          <div class="senior-dev--shoulder-right"></div>
+        </div>
+
         <div class="senior-dev--arm-left">
           <div class="senior-dev--hand-left"></div>
         </div>
@@ -469,14 +553,16 @@
 
     <script type="text/javascript">
       document.addEventListener("keyup", (event) => {
+        // show or hide overlay reference image
         if (event.code === "KeyT") {
           const container = document.querySelector("#overlay-content");
+          container.classList.toggle("content-container--overlay");
+        }
 
-          if (container.classList.contains("content-container--overlay")) {
-            container.classList.remove("content-container--overlay");
-          } else {
-            container.classList.add("content-container--overlay");
-          }
+        // show or hide css content
+        if (event.code === "KeyY") {
+          const container = document.querySelector("#content");
+          container.classList.toggle("hidden");
         }
       });
     </script>
