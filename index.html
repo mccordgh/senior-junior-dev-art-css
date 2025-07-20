@@ -41,7 +41,10 @@
         position: relative;
         width: 50rem;
         height: 49rem;
-        /* background-color: green; */
+      }
+
+      .overlay-content {
+        position: absolute;
       }
 
       .content-container--overlay {
@@ -64,7 +67,7 @@
 
       .junior-dev--head {
         background-color: var(--white);
-        border: 5px solid black;
+        border: 5px solid var(--black);
         border-radius: 100%;
         position: absolute;
         width: 5.8rem;
@@ -135,7 +138,7 @@
         position: absolute;
         top: 3.2rem;
         left: 2.4rem;
-        border: 5px solid black;
+        border: 5px solid var(--black);
         width: 3.4rem;
         height: 6.2rem;
         border-radius: 10px;
@@ -147,7 +150,7 @@
         position: absolute;
         top: 4.2rem;
         left: 1.2rem;
-        border: 5px solid black;
+        border: 5px solid var(--black);
         width: 1.2rem;
         height: 3.2rem;
         transform: rotate(40deg);
@@ -158,7 +161,7 @@
         position: absolute;
         top: 4.2rem;
         right: 3.5rem;
-        border: 5px solid black;
+        border: 5px solid var(--black);
         width: 1.2rem;
         height: 3.2rem;
         transform: rotate(-35deg);
@@ -169,7 +172,7 @@
         position: absolute;
         bottom: -0.1rem;
         left: 2.2rem;
-        border: 5px solid black;
+        border: 5px solid var(--black);
         width: 1.2rem;
         height: 3.2rem;
         transform: rotate(4deg);
@@ -180,7 +183,7 @@
         position: absolute;
         bottom: -0.1rem;
         right: 4.2rem;
-        border: 5px solid black;
+        border: 5px solid var(--black);
         width: 1.2rem;
         height: 3.2rem;
         transform: rotate(-9deg);
@@ -197,10 +200,43 @@
         transform: rotate(-34deg);
         z-index: 85;
       }
+
+      .junior-dev--sword-hilt {
+        position: absolute;
+        border: 3px solid var(--black);
+        width: 1rem;
+        height: 2rem;
+        transform: rotate(-34deg);
+      }
+
+      .junior-dev--sword-guard {
+        /* Styles for the sword guard */
+      }
+
+      .junior-dev--sword-blade-left {
+        /* Styles for the left side of the sword blade */
+      }
+
+      .junior-dev--sword-blade-right {
+        /* Styles for the right side of the sword blade */
+      }
+
+      .junior-dev--sword-blade-point {
+        /* Styles for the sword blade point */
+      }
     </style>
   </head>
   <body>
-    <div id="content" class="content-container content-container--overlay">
+    <div
+      id="overlay-content"
+      class="content-container overlay-content content-container--overlay"
+      style="border: 4px solid red"
+    ></div>
+    <div
+      id="content"
+      style="border: 4px solid purple"
+      class="content-container"
+    >
       <div class="junior-dev">
         <div class="junior-dev--head">
           <div class="junior-dev--mouth"></div>
@@ -210,14 +246,20 @@
         <div class="junior-dev--arm-right"></div>
         <div class="junior-dev--leg-left"></div>
         <div class="junior-dev--leg-right"></div>
-        <div class="junior-dev--sword-container"></div>
+        <div class="junior-dev--sword-container">
+          <div class="junior-dev--sword-hilt"></div>
+          <div class="junior-dev--sword-guard"></div>
+          <div class="junior-dev--sword-blade-left"></div>
+          <div class="junior-dev--sword-blade-right"></div>
+          <div class="junior-dev--sword-blade-point"></div>
+        </div>
       </div>
     </div>
 
     <script type="text/javascript">
       document.addEventListener("keyup", (event) => {
         if (event.code === "KeyT") {
-          const container = document.querySelector("#content");
+          const container = document.querySelector("#overlay-content");
 
           if (container.classList.contains("content-container--overlay")) {
             container.classList.remove("content-container--overlay");
