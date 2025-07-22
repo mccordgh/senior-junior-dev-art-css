@@ -500,6 +500,7 @@
       }
 
       .senior-dev--arm-left {
+        opacity: 0;
         position: relative;
         width: 100%;
         height: 100%;
@@ -519,9 +520,11 @@
         );
         background-color: var(--dark-grey);
         top: -12rem;
+        z-index: 10;
       }
 
       .senior-dev--arm-left-outer {
+        opacity: 0;
         position: relative;
         width: 106%;
         height: 106%;
@@ -541,10 +544,10 @@
         );
         background-color: var(--black);
         left: -0.5rem;
+        z-index: 10;
       }
 
       .senior-dev--arm-group-right {
-        border: 2px solid black;
         position: relative;
         bottom: 54rem;
         left: 26rem;
@@ -553,7 +556,17 @@
         z-index: 70;
       }
 
+      .senior-dev--hand-group-right {
+        position: relative;
+        bottom: 33rem;
+        left: 26rem;
+        height: 19rem;
+        width: 11rem;
+        z-index: 80;
+      }
+
       .senior-dev--arm-right {
+        /* opacity: 0; */
         position: relative;
         width: 100%;
         height: 100%;
@@ -575,6 +588,7 @@
       }
 
       .senior-dev--arm-right-outer {
+        /* opacity: 0; */
         position: relative;
         width: 109%;
         height: 109%;
@@ -594,6 +608,7 @@
       }
 
       .senior-dev--hand-right-outer {
+        top: -39.4rem;
         position: relative;
         width: 110%;
         height: 110%;
@@ -615,8 +630,8 @@
       }
 
       .senior-dev--hand-right {
-        top: -19.2rem;
-        left: 0.4rem;
+        top: -58.8rem;
+        left: 0.5rem;
         position: relative;
         width: 100%;
         height: 100%;
@@ -686,6 +701,94 @@
         );
         background-color: var(--white);
       }
+
+      .senior-dev--armpads-group-right {
+        z-index: 75;
+        top: -95rem;
+        left: 27.2rem;
+        /* border: 2px solid red; */
+        height: 23rem;
+        width: 11rem;
+        position: relative;
+      }
+
+      .senior-dev--armpads-right-outer {
+        position: relative;
+        width: 110%;
+        height: 110%;
+        clip-path: polygon(26% 21%, 23% 6%, 37% 5%, 36% 30%, 20% 37%, 15% 35%);
+        background-color: var(--black);
+      }
+
+      .senior-dev--armpads-right-outer-2 {
+        top: -39.6rem;
+        left: 2rem;
+        position: relative;
+        width: 110%;
+        height: 110%;
+        clip-path: polygon(11% 10%, 44% 14%, 56% 36%, 17% 25%);
+        background-color: var(--black);
+        z-index: 2;
+      }
+
+      .senior-dev--armpads-right-outer-3 {
+        top: -85rem;
+        left: -1rem;
+        position: relative;
+        width: 110%;
+        height: 110%;
+        clip-path: polygon(
+          42% 10%,
+          81% 21%,
+          81% 30%,
+          74% 40%,
+          40% 44%,
+          23% 38%,
+          13% 26%,
+          20% 15%
+        );
+        background-color: var(--black);
+      }
+
+      .senior-dev--armpads-right {
+        top: -24.6rem;
+        left: 0.4rem;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(26% 21%, 23% 6%, 37% 5%, 36% 30%, 20% 37%, 15% 35%);
+        background-color: var(--blue);
+      }
+
+      .senior-dev--armpads-right-2 {
+        top: -64.2rem;
+        left: 2.3rem;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(13% 10%, 44% 14%, 56% 34%, 18% 23%);
+        background-color: var(--blue);
+        z-index: 2;
+      }
+
+      .senior-dev--armpads-right-3 {
+        top: -109.4rem;
+        left: -0.5rem;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(
+          42% 10%,
+          81% 21%,
+          81% 30%,
+          74% 40%,
+          40% 44%,
+          23% 38%,
+          13% 26%,
+          20% 15%
+        );
+        background-color: var(--blue);
+      }
     </style>
   </head>
   <body>
@@ -723,7 +826,9 @@
         <div class="senior-dev--head">
           <div class="senior-dev--mouth"></div>
         </div>
+
         <!-- <div class="senior-dev--hair">IGNORING FOR NOW WHILE THINKING OF IMPLEMENTATION</div> -->
+
         <div class="senior-dev--back-left"></div>
         <div class="senior-dev--back-right"></div>
 
@@ -749,11 +854,22 @@
         </div>
 
         <div class="senior-dev--arm-group-right">
-          <!-- <div class="senior-dev--arm-right-outer"></div>
-          <div class="senior-dev--arm-right"></div> -->
+          <div class="senior-dev--arm-right-outer"></div>
+          <div class="senior-dev--arm-right"></div>
+        </div>
 
+        <div class="senior-dev--hand-group-right">
           <div class="senior-dev--hand-right-outer"></div>
           <div class="senior-dev--hand-right"></div>
+        </div>
+
+        <div class="senior-dev--armpads-group-right">
+          <div class="senior-dev--armpads-right-outer"></div>
+          <div class="senior-dev--armpads-right"></div>
+          <div class="senior-dev--armpads-right-outer-2"></div>
+          <div class="senior-dev--armpads-right-2"></div>
+          <div class="senior-dev--armpads-right-outer-3"></div>
+          <div class="senior-dev--armpads-right-3"></div>
         </div>
 
         <div class="senior-dev--waist-left"></div>
