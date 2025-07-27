@@ -37,6 +37,7 @@
 
       .hidden {
         visibility: hidden;
+        opacity: 0;
       }
 
       html,
@@ -306,7 +307,6 @@
 
       .senior-dev {
         color: var(--black);
-        border: 1px solid var(--black);
         height: 46rem;
         width: 38rem;
         position: relative;
@@ -449,7 +449,6 @@
         height: 12.3rem;
         left: 13.1rem;
         top: -2rem;
-        /* clip-path: ellipse(125px 140px at 10% 20%); */
         clip-path: polygon(
           5% 32%,
           0% -1%,
@@ -471,7 +470,6 @@
         height: 13.3rem;
         left: 12.6rem;
         top: 10.6rem;
-        /* clip-path: ellipse(125px 140px at 10% 20%); */
         clip-path: polygon(
           5% 32%,
           0% -1%,
@@ -1600,13 +1598,37 @@
         top: -78rem;
         left: 14rem;
       }
+
+      .arrow-8 {
+        top: -77rem;
+        left: 2rem;
+        transform: rotate(-13deg);
+      }
+
+      .arrow-9 {
+        top: -78rem;
+        left: 2rem;
+        transform: rotate(-30deg);
+      }
+
+      .arrow-10 {
+        top: -82rem;
+        left: 2rem;
+        transform: rotate(-51deg);
+      }
+
+      .arrow-11 {
+        top: -101rem;
+        left: 16rem;
+        transform: rotate(50deg);
+      }
     </style>
   </head>
   <body>
-    <div
-      id="overlay-content"
+    <!-- <div
+      id="overlay-content hidden"
       class="content-container overlay-content content-container--overlay"
-    ></div>
+    ></div> -->
     <div id="content" class="content-container">
       <div class="junior-dev">
         <div class="junior-dev--head">
@@ -1766,11 +1788,15 @@
           <div class="arrow arrow-5"></div>
           <div class="arrow arrow-6"></div>
           <div class="arrow arrow-7"></div>
+          <div class="arrow arrow-8"></div>
+          <div class="arrow arrow-9"></div>
+          <div class="arrow arrow-10"></div>
+          <div class="arrow arrow-11"></div>
         </div>
       </div>
     </div>
 
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       document.addEventListener("keyup", (event) => {
         // show or hide overlay reference image
         if (event.code === "KeyT") {
@@ -1784,6 +1810,6 @@
           container.classList.toggle("hidden");
         }
       });
-    </script>
+    </script> -->
   </body>
 </html>
