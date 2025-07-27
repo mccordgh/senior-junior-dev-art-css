@@ -12,6 +12,9 @@
         --brown: #845636; /* sword */
         --blue: #51aff4; /* armor base */
         --dark-grey: #4c4e4f; /* armor cloth */
+        --light-purple: #a039c9;
+        --medium-purple: #6c4eca;
+        --dark-purple: #4e4ed8;
 
         /* --lightest-color: #b3cbb9;
         --light-color: #8fb996;
@@ -1121,7 +1124,7 @@
         left: 12rem;
         height: 25rem;
         width: 19rem;
-        /* z-index: 5; */
+        z-index: 5;
       }
 
       .senior-dev-chest-outer {
@@ -1300,6 +1303,131 @@
         clip-path: polygon(15% 29%, 29% 23%, 42% 24%, 47% 49%, 27% 96%);
         background-color: var(--blue);
       }
+
+      .senior-dev-sword-group {
+        position: relative;
+        top: -248rem;
+        left: -1rem;
+        height: 41rem;
+        width: 34rem;
+        z-index: 1;
+      }
+
+      .senior-dev-sword-handle-bottom-outer {
+        top: -1rem;
+        left: -0.5rem;
+        position: relative;
+        width: 110%;
+        height: 110%;
+        clip-path: polygon(
+          81% 9%,
+          81% 7%,
+          84% 6%,
+          87% 8%,
+          87% 10%,
+          84% 12%,
+          84% 10%,
+          83% 9%
+        );
+        background-color: var(--black);
+      }
+
+      .senior-dev-sword-handle-bottom {
+        top: -45.3rem;
+        left: 6.7rem;
+        position: relative;
+        width: 85%;
+        height: 85%;
+        clip-path: polygon(
+          81% 9%,
+          81% 7%,
+          84% 6%,
+          87% 8%,
+          87% 10%,
+          84% 12%,
+          84% 10%,
+          83% 9%
+        );
+        background-color: var(--medium-purple);
+      }
+
+      .senior-dev-sword-handle-outer {
+        top: -86rem;
+        left: 22.5rem;
+        position: relative;
+        width: 110%;
+        height: 110%;
+        clip-path: polygon(10% 30%, 20% 20%, 22% 20%, 23% 22%, 12% 32%);
+        background-color: var(--black);
+      }
+
+      .senior-dev-sword-handle {
+        top: -129rem;
+        left: 23.6rem;
+        position: relative;
+        width: 90%;
+        height: 90%;
+        clip-path: polygon(10% 31%, 21% 20%, 23% 20%, 22% 22%, 11% 32%);
+        background-color: var(--white);
+      }
+
+      .senior-dev-sword-blade-top-outer {
+        top: -168rem;
+        left: 14.5rem;
+        position: relative;
+        width: 110%;
+        height: 110%;
+        clip-path: polygon(12% 36%, 23% 24%, 37% 34%, 37% 64%);
+        background-color: var(--black);
+      }
+
+      .senior-dev-sword-blade-top {
+        top: -211.4rem;
+        left: 15.4rem;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(12% 36%, 23% 24%, 37% 34%, 37% 64%);
+        background-color: var(--dark-purple);
+      }
+
+      .senior-dev-sword-blade-bottom-outer {
+        top: -228rem;
+        left: -2.5rem;
+        position: relative;
+        width: 110%;
+        height: 110%;
+        clip-path: polygon(
+          10% 38%,
+          13% 38%,
+          16% 36%,
+          28% 22%,
+          50% 22%,
+          35% 43%,
+          30% 43%,
+          12% 40%
+        );
+        background-color: var(--black);
+      }
+
+      .senior-dev-sword-blade-bottom {
+        top: -268.4rem;
+        left: -0.4rem;
+        position: relative;
+        width: 80%;
+        height: 80%;
+        clip-path: polygon(
+          10% 39%,
+          13% 38%,
+          16% 36%,
+          28% 22%,
+          50% 22%,
+          38% 44%,
+          30% 43%,
+          12% 40%
+        );
+        background-color: var(--light-purple);
+      }
     </style>
   </head>
   <body>
@@ -1332,19 +1460,9 @@
       </div>
 
       <div class="senior-dev">
-        <div class="senior-dev--sword-top"></div>
-
         <div class="senior-dev--head">
           <div class="senior-dev--mouth"></div>
         </div>
-
-        <!-- <div class="senior-dev--hair">IGNORING FOR NOW WHILE THINKING OF IMPLEMENTATION</div> -->
-
-        <div class="senior-dev--back-left"></div>
-        <div class="senior-dev--back-right"></div>
-
-        <div class="senior-dev--collar-left"></div>
-        <div class="senior-dev--collar-right"></div>
 
         <div class="senior-dev--shoulder-group-left">
           <div class="senior-dev--shoulder-left-outer"></div>
@@ -1436,6 +1554,17 @@
           <div class="senior-dev-back-pieces-center-left"></div>
           <div class="senior-dev-back-pieces-center-right-outer"></div>
           <div class="senior-dev-back-pieces-center-right"></div>
+        </div>
+
+        <div class="senior-dev-sword-group">
+          <div class="senior-dev-sword-handle-bottom-outer"></div>
+          <div class="senior-dev-sword-handle-bottom"></div>
+          <div class="senior-dev-sword-handle-outer"></div>
+          <div class="senior-dev-sword-handle"></div>
+          <div class="senior-dev-sword-blade-top-outer"></div>
+          <div class="senior-dev-sword-blade-top"></div>
+          <div class="senior-dev-sword-blade-bottom-outer"></div>
+          <div class="senior-dev-sword-blade-bottom"></div>
         </div>
       </div>
     </div>
