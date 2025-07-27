@@ -17,15 +17,15 @@
         --dark-purple: #4e4ed8;
 
         /* --lightest-color: #b3cbb9;
-        --light-color: #8fb996;
-        --medium-color: #709775;
-        --dark-color: #415d43;
-        --dark-color-rgba: rgba(65, 93, 67, 1);
-        --darkest-color: #111d13;
-        --light-transparent-bg: hsla(135, 19%, 75%, 0.4);
+              --light-color: #8fb996;
+              --medium-color: #709775;
+              --dark-color: #415d43;
+              --dark-color-rgba: rgba(65, 93, 67, 1);
+              --darkest-color: #111d13;
+              --light-transparent-bg: hsla(135, 19%, 75%, 0.4);
 
-        --folder-color: #ffa419;
-        --folder-color-dark: #b26b00; */
+              --folder-color: #ffa419;
+              --folder-color-dark: #b26b00; */
       }
 
       * {
@@ -40,6 +40,7 @@
 
       html,
       body {
+        font-family: Arial, Helvetica, sans-serif;
         background-color: var(--white);
         width: 100%;
         height: 100%;
@@ -68,7 +69,6 @@
 
       .junior-dev {
         color: var(--black);
-        /* border: 1px solid var(--black); */
         height: 11.4rem;
         width: 10.6rem;
         position: absolute;
@@ -709,7 +709,6 @@
         z-index: 75;
         top: -95rem;
         left: 27.2rem;
-        /* border: 2px solid red; */
         height: 23rem;
         width: 11rem;
         position: relative;
@@ -797,7 +796,6 @@
         z-index: 75;
         top: -109rem;
         left: 2.2rem;
-        /* border: 2px solid red; */
         height: 23rem;
         width: 11rem;
         position: relative;
@@ -1428,19 +1426,129 @@
         );
         background-color: var(--light-purple);
       }
+
+      .dev-text-group {
+        position: relative;
+        height: 40rem;
+        width: 53rem;
+        top: -292rem;
+        left: -2rem;
+      }
+
+      .dev-text-group span {
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+
+      .text-large {
+        font-size: 2.4rem;
+      }
+
+      .senior-dev-text-title {
+        position: relative;
+        top: 1.4rem;
+        left: 20.4rem;
+      }
+
+      .junior-dev-text-title {
+        position: relative;
+        top: -12.4rem;
+        left: 39rem;
+      }
+
+      .dev-text-bubble-text span,
+      .junior-dev-text-title span,
+      .senior-dev-text-title span {
+        font-size: 2.4rem;
+      }
+
+      .dev-text-bubble-text {
+        position: relative;
+        top: -30.6rem;
+        left: 39.8rem;
+        width: 10rem;
+      }
+
+      .dev-text-bubble-text span {
+        text-align: center;
+      }
+
+      .dev-text-1 {
+        position: relative;
+        top: 6.2rem;
+        left: 3.8rem;
+        width: 4rem;
+        transform: rotate(38deg);
+      }
+
+      .dev-text-2 {
+        position: relative;
+        top: 12rem;
+        left: 1rem;
+        transform: rotate(32deg);
+      }
+
+      .dev-text-3 {
+        position: relative;
+        top: -3.1rem;
+        left: 11.8rem;
+        width: 13rem;
+        transform: rotate(30deg);
+      }
+
+      .dev-text-bubble {
+        position: relative;
+        height: 18rem;
+        width: 19rem;
+        top: -8rem;
+        left: 35rem;
+        border-radius: 100% 80%;
+        border: 0.6rem solid var(--black);
+      }
+
+      .div-text-bubble-pointer-outer {
+        top: -9rem;
+        left: 39rem;
+        position: relative;
+        width: 4rem;
+        height: 4rem;
+        clip-path: polygon(
+          47% 14%,
+          45% 36%,
+          28% 52%,
+          60% 52%,
+          70% 52%,
+          90% 39%,
+          118% 20%
+        );
+        background-color: var(--black);
+      }
+
+      .div-text-bubble-pointer {
+        top: -12.6rem;
+        left: 40rem;
+        position: relative;
+        width: 2.4rem;
+        height: 3rem;
+        clip-path: polygon(
+          47% 14%,
+          45% 36%,
+          28% 52%,
+          60% 52%,
+          70% 52%,
+          90% 39%,
+          118% 20%
+        );
+        background-color: var(--white);
+      }
     </style>
   </head>
   <body>
     <div
       id="overlay-content"
       class="content-container overlay-content content-container--overlay"
-      style="border: 4px solid red"
     ></div>
-    <div
-      id="content"
-      style="border: 4px solid purple"
-      class="content-container"
-    >
+    <div id="content" class="content-container">
       <div class="junior-dev">
         <div class="junior-dev--head">
           <div class="junior-dev--mouth"></div>
@@ -1565,6 +1673,32 @@
           <div class="senior-dev-sword-blade-top"></div>
           <div class="senior-dev-sword-blade-bottom-outer"></div>
           <div class="senior-dev-sword-blade-bottom"></div>
+        </div>
+
+        <div class="dev-text-group">
+          <div class="senior-dev-text-title">
+            <span class="text-large">Sr. Dev</span>
+          </div>
+          <div class="dev-text-1">
+            <span>Missed deadline</span>
+          </div>
+          <div class="dev-text-2">
+            <span>Customer complaints</span>
+          </div>
+          <div class="dev-text-3">
+            <span>Manager complaining new dev is too slow</span>
+          </div>
+
+          <div class="dev-text-bubble"></div>
+          <div class="div-text-bubble-pointer-outer"></div>
+          <div class="div-text-bubble-pointer"></div>
+          <div class="dev-text-bubble-text">
+            <span class="text-large">Nice PR! You are doing great so far!</span>
+          </div>
+
+          <div class="junior-dev-text-title">
+            <span class="text-large">Jr. Dev</span>
+          </div>
         </div>
       </div>
     </div>
